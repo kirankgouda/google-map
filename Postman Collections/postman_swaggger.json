@@ -1,0 +1,22 @@
+{
+	"info": {
+		"_postman_id": "d8b8d588-7200-485b-9800-bada88f02f3b",
+		"name": "swagger ui",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"_postman_id": "32bdb04f-17f8-47a1-9c44-a96338bd8650",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
