@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "d269e124-2f61-40c5-ac41-69f32a36bf05",
+		"name": "E-com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7407ee1c-dcdf-4ef1-879e-49209a33db74",
+						"exec": [
+							"pm.environment.set(\"email\",data.email);\r",
+							"pm.environment.set(\"password\",data.password);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0c89d58-c7b1-4cfe-a48e-5301ff165b46",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "74bdb10a-e22a-435a-ae4e-1d703d16ba13",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\r\n    \"email\": \"{{email}}\",\r\n\t\"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://ecommerceservice.herokuapp.com/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "563d8256-0e05-4932-8fa9-015b5b7c0878",
+						"exec": [
+							"const accesstoken=pm.response.json().accessToken;\r",
+							"pm.environment.set(\"tokenaccess\", accesstoken);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "3e14d117-ecef-4846-9edf-e13f24fa8d61",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\r\n    \"email\": \"{{email}}\",\r\n\t\"password\":\"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://ecommerceservice.herokuapp.com/user/login"
+			},
+			"response": []
+		}
+	]
+}
